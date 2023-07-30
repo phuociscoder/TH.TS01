@@ -51,6 +51,16 @@ body{
   box-shadow: -1px 1px 5px grey;
 }
 
+.form-logo{
+  width: 100%;
+  height: 170px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-repeat: round;
+  box-shadow: -1px 1px 5px black;
+  background-image: url('./assets/th001.png');
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
