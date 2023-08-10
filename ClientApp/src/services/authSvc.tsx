@@ -18,7 +18,7 @@ const AuthSvc = {
     login : function(userName: string, password: string){
        return axios.post('https://localhost:7179/api/user/login', { 
                           userName: userName,
-                          lastName: password
+                          password: password
                         });
     }
 };

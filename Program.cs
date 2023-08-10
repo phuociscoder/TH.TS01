@@ -11,6 +11,8 @@ builder.Services.AddDbContext<ThDbContext>();
 builder.Services.AddScoped<IUserServices, UserServices>();
 builder.Services.AddScoped<ITimeSheetServices, TimeSheetServices>();
 
+builder.Services.AddCors();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,6 +25,10 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseCors(options =>
+     options.WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 
 
 app.MapControllerRoute(
